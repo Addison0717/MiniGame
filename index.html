@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BB homework</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Good luck! You can do it!</h1>
+        <script src="your_javascript_here.js"></script>
+        <script src="tests.js"></script>
+
+
+        <i class="fas fa-home" id="rest" onclick="rest(hero); console.log('hellyeah'); updateStats()"></i>
+
+        <i class="fas fa-fire-extinguisher" onclick="pickUpItem(hero, {type:'Fire Extiguisher', damage:50}); console.log('Picked Up a Fire Extinguiser! Y tho'); updateStats()"></i>
+
+        <i class="fab fa-optin-monster" onclick="doBattle(hero, {name: 'Beast', heroic: false, health: 10, weapon: { type: 'Claws', damage: 1 }}); console.log('You just fought this terrible monster! You should rest up.'); updateStats()"></i>
+
+        <i class="fas fa-briefcase" onclick="equipWeapon(hero, window.prompt('What indexed item do you want?')); updateStats()"></i>
+
+
+        <form class="nameChange">
+
+          <h3>Change the name of your Hero below!</h1>
+
+          <input type="text" id="nameInput" >
+
+          <br>
+          <br>
+
+          <button type="button"onclick="changeName(); updateStats()">Change Hero Name</button>
+
+        </form>
+
+        <hr>
+
+<div class="wrapper">
+
+        <div class="statscontainer container">
+
+          <h1 class="header">Stats:</h1>
+
+          <div id="stats"></div>
+
+        </div>
+
+
+        <div class="inventorycontainer container">
+
+          <h1 class="header">Inventory:</h1>
+
+          <h2 id="inventory"></h2>
+
+        </div>
+
+
+</div>
+
+
+
+
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+          displayStats();
+          displayInventory();
+
+        });
+
+        </script>
+
+    </body>
+</html>
